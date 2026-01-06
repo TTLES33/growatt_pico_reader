@@ -2,6 +2,7 @@ import machine
 import utime
 import struct
 
+#TODO: upload to PyPi - https://packaging.python.org/en/latest/tutorials/packaging-projects/
 
 # Configuration object storing metadata for each register
 REGISTER_CONFIG = {
@@ -275,6 +276,25 @@ RX_PIN = 1
 CTRL_PIN = 2  # (DE/RE pin for RS485)
 BAUD_RATE = 9600
 SLAVE_ADDR = 1
+
+#   -----  CHANGE COMMUNICATION SETTINGS -----
+def set_tx_pin(pin_number):
+    global TX_PIN
+    TX_PIN = pin_number
+
+def set_rx_pin(pin_number):
+    global RX_PIN
+    RX_PIN = pin_number
+
+def set_ctrl_pin(pin_number):
+    global CTRL_PIN
+    CTRL_PIN = pin_number
+
+def set_slave_address(address):
+    if address < 1 or address > 255:
+        raise Exception("Modbus slave address must be between 1 and 255.")
+    global SLAVE_ADDR
+    SLAVE_ADDR = address
 
 # HARDWARE SETUP
 uart = machine.UART(UART_ID, baudrate=BAUD_RATE, tx=machine.Pin(TX_PIN), rx=machine.Pin(RX_PIN), bits=8, parity=None, stop=1)
