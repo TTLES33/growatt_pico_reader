@@ -94,9 +94,10 @@ print(grid_frequency)
 
 ## Example Hardware Setup
 On growatt inverter on LCD display set RS485 mode to VPP. Pins 5 (modbus A) and 4 (modbus B) are used on RJ45 connector.
+
 <img src="assets/circuit_image.png" height="300"/>
-<img src="assets/physical_connection.jpg" height="300"/>
-<img src="assets/rs485_port.jpg" height="300"/>
+<img src="assets/physical_connection.jpg" height="250"/>
+<img src="assets/rs485_port.jpg" height="250"/>
 
 
 ### Used resources:
