@@ -24,13 +24,13 @@ set_slave_address(address) # change growatt address (default is 1) (address can 
 ### Read data
 #### Read All Data:
 ```python
-all_data = get_all()
+all_data = await get_all()
 print(all_data)
 ```
 
 #### Read specific data:
 ```python
-grid_frequency = get_Fac()
+grid_frequency = await get_Fac()
 print(grid_frequency)
 ```
 
