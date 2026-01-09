@@ -304,7 +304,7 @@ async def get_PSelf(): return await read_variable("PSelf")
 
 # Get object of all available values
 async def get_all():
-    results = []
+    results = {}
 
     for name in REGISTER_CONFIG.keys():
         # Construct the function name string
@@ -312,7 +312,7 @@ async def get_all():
         if func_name in globals():
             element_value = await globals()[func_name]()
             element_to_add = {name: element_value}
-            results.append(element_to_add)
+            results.update(element_to_add)
         else:
             raise Exception(f"Warning: {func_name} not implemented.")
 
