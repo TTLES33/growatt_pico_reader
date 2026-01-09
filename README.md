@@ -53,26 +53,26 @@ print(grid_frequency)
 | 46               | Vac3                   | Three phase grid voltage               | V    | get_Vac3()               |                              |
 | 47               | Iac3                   | Three phase grid output current        | A    | get_Iac3()               |                              |
 | 48-49            | Pac3                   | Three phase grid output power          | VA   | get_Pac3()               |                              |
-| 50               | Vac RS                 | Three phase grid voltage               | V    | get_Vac_RS()             |                              |
-| 51               | Vac ST                 | Three phase grid voltage               | V    | get_Vac_ST()             |                              |
-| 52               | Vac TR                 | Three phase grid voltage               | V    | get_Vac_TR()             |                              |
-| 53-54            | Eac today              | Today generate energy                  | kWh  | get_Eac_today()          |                              |
-| 55-56            | Eac total              | Total generate energy                  | kWh  | get_Eac_total()          |                              |
-| 57-58            | Time total             | Work time total                        | s    | get_Time_total()         |                              |
+| 50               | Vac_RS                 | Three phase grid voltage               | V    | get_Vac_RS()             |                              |
+| 51               | Vac_ST                 | Three phase grid voltage               | V    | get_Vac_ST()             |                              |
+| 52               | Vac_TR                 | Three phase grid voltage               | V    | get_Vac_TR()             |                              |
+| 53-54            | Eac_today              | Today generate energy                  | kWh  | get_Eac_today()          |                              |
+| 55-56            | Eac_total              | Total generate energy                  | kWh  | get_Eac_total()          |                              |
+| 57-58            | Time_total             | Work time total                        | s    | get_Time_total()         |                              |
 | 59-60            | Epv1_today             | PV1Energy today                        | kWh  | get_Epv1_today()         |                              |
 | 61-62            | Epv1_total             | PV1Energy total                        | kWh  | get_Epv1_total()         |                              |
 | 91-92            | Epv_total              | PV Energy total                        | kWh  | get_Epv_total()          |                              |
 | 93               | Temp1                  | Inverter temperature                   | °C   | get_Temp1()              |                              |
 | 101              | RealOPPercent          | Real Output power Percent              | %    | get_RealOPPercent()      |                              |
-| 105              | Fault Maincode         | Inverter fault maincode                | \-   | get_FaultMaincode()      |                              |
+| 105              | FaultMaincode          | Inverter fault maincode                | \-   | get_FaultMaincode()      |                              |
 | 1009-1010        | Pdischarge1            | Discharge power                        | W    | get_Pdischarge1()        |                              |
 | 1011-1012        | Pcharge1               | Charge power                           | W    | get_Pcharge1()           |                              |
 | 1013             | Vbat                   | Battery voltage                        | V    | get_Vbat()               |                              |
 | 1014             | SOC                    | State of charge Capacity               | %    | get_SOC()                |                              |
 | 1021-1022        | PactouserTotal         | AC power to user total                 | W    | get_PactouserTotal()     |                              |
-| 1023-1024        | Pac to grid            | AC power to grid                       | W    | get_Pac_to_grid()        |                              |
-| 1029-1030        | Pactogrid total        | AC power to grid total                 | W    | get_Pactogrid_total()    |                              |
-| 1040             | Battery Temperature    | Battery Temperature                    | °C   | get_BatteryTemperature() |                              |
+| 1023-1024        | Pac_to_grid            | AC power to grid                       | W    | get_Pac_to_grid()        |                              |
+| 1029-1030        | Pactogrid_total        | AC power to grid total                 | W    | get_Pactogrid_total()    |                              |
+| 1040             | BatteryTemperature     | Battery Temperature                    | °C   | get_BatteryTemperature() |                              |
 | 1044-1045        | Etouser_today          | Energy to user today                   | kWh  | get_Etouser_today()      |                              |
 | 1046-1047        | Etouser_total          | Energy to user total                   | kWh  | get_Etouser_total()      |                              |
 | 1048-1049        | Etogrid_today          | Energy to grid today                   | kWh  | get_Etogrid_today()      |                              |
@@ -83,8 +83,8 @@ print(grid_frequency)
 | 1058-1059        | Echarge1_total         | Charge1 energy total                   | kWh  | get_Echarge1_total()     |                              |
 | 1060-1061        | ELocalLoad_Today       | Local load energy today                | kWh  | get_ELocalLoad_Today()   |                              |
 | 1062-1063        | ELocalLoad_Total       | Local load energy total                | kWh  | get_ELocalLoad_Total()   |                              |
-| 1124-1125        | AC Charge Energy today | AC Charge Energy today                 | kWh  | get_ACCharge_today()     |                              |
-| 1128-1129        | AC Charge Power        | AC Charge Power                        | W    | get_ACChargePower()      |                              |
+| 1124-1125        | ACCharge_Today         | AC Charge Energy today                 | kWh  | get_ACCharge_today()     |                              |
+| 1128-1129        | ACChargePower          | AC Charge Power                        | W    | get_ACChargePower()      |                              |
 | 1137-1138        | Esystem_today          | System electric energy today           | kWh  | get_Esystem_today()      |                              |
 | 1139-1140        | Esystem_total          | System electric energy total           | kWh  | get_Esystem_total()      |                              |
 | 1141-1142        | Eself_today            | self electric energy today             | kWh  | get_Eself_today()        |                              |
