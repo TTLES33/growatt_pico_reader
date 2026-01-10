@@ -36,7 +36,7 @@ print(grid_frequency)
 
 #### All available data to read: 
 | Register Address | Variable Short         | Description                            | Unit | Function Call            | Note                         |
-| ---------------- | ---------------------- | -------------------------------------- | ---- | ------------------------ | ---------------------------- |
+|------------------|------------------------|----------------------------------------|------|--------------------------|------------------------------|
 | 0                | Inverter Status        | Inverter run state                     | \-   | get_inverter_status()    | 0:waiting, 1:normal, 3:fault |
 | 1-2              | Ppv                    | Input power                            | W    | get_Ppv()                |                              |
 | 3                | Vpv1                   | PV1 voltage                            | V    | get_Vpv1()               |                              |
@@ -69,10 +69,13 @@ print(grid_frequency)
 | 1011-1012        | Pcharge1               | Charge power                           | W    | get_Pcharge1()           |                              |
 | 1013             | Vbat                   | Battery voltage                        | V    | get_Vbat()               |                              |
 | 1014             | SOC                    | State of charge Capacity               | %    | get_SOC()                |                              |
-| 1021-1022        | PactouserTotal         | AC power to user total                 | W    | get_PactouserTotal()     |                              |
+| 1015-1016        | Pac_to_user            | AC power to user                       | W    | get_Pac_to_user_Total()  |                              |
+| 1021-1022        | Pac_to_user_Total      | AC power to user total                 | W    | get_Pac_to_user_Total()  |                              |
 | 1023-1024        | Pac_to_grid            | AC power to grid                       | W    | get_Pac_to_grid()        |                              |
-| 1029-1030        | Pactogrid_total        | AC power to grid total                 | W    | get_Pactogrid_total()    |                              |
-| 1040             | BatteryTemperature     | Battery Temperature                    | °C   | get_BatteryTemperature() |                              |
+| 1029-1030        | Pac_to_grid_total      | AC power to grid total                 | W    | get_Pac_to_grid_total()  |                              |
+| 1031-1032        | PLocalLoad             | INV power to local load                | W    | get_PLocalLoad()         |                              |
+| 1037-1038        | PLocalLoad_total       | INV power to local load total          | W    | get_PLocalLoad_total()   |                              |
+| 1040             | Battery Temperature    | Battery Temperature                    | °C   | get_BatteryTemperature() |                              |
 | 1044-1045        | Etouser_today          | Energy to user today                   | kWh  | get_Etouser_today()      |                              |
 | 1046-1047        | Etouser_total          | Energy to user total                   | kWh  | get_Etouser_total()      |                              |
 | 1048-1049        | Etogrid_today          | Energy to grid today                   | kWh  | get_Etogrid_today()      |                              |

@@ -37,9 +37,12 @@ REGISTER_CONFIG = {
     "Pcharge1": {"addr": 1011, "qty": 2, "unit": 0.1},
     "Vbat": {"addr": 1013, "qty": 1, "unit": 0.1},
     "SOC": {"addr": 1014, "qty": 1, "unit": 1},
-    "PactouserTotal": {"addr": 1021, "qty": 2, "unit": 0.1},
+    "Pac_to_user": {"addr": 1015, "qty": 2, "unit": 0.1},
+    "Pac_to_user_Total": {"addr": 1021, "qty": 2, "unit": 0.1},
     "Pac_to_grid": {"addr": 1023, "qty": 2, "unit": 0.1},
-    "Pactogrid_total": {"addr": 1029, "qty": 2, "unit": 0.1},
+    "Pac_to_grid_total": {"addr": 1029, "qty": 2, "unit": 0.1},
+    "PLocalLoad" : {"addr": 1031, "qty": 2, "unit": 0.1},
+    "PLocalLoad_total" : {"addr": 1037, "qty": 2, "unit": 0.1},
     "BatteryTemperature": {"addr": 1040, "qty": 1, "unit": 0.1},
     "Etouser_today": {"addr": 1044, "qty": 2, "unit": 0.1},
     "Etouser_total": {"addr": 1046, "qty": 2, "unit": 0.1},
@@ -213,17 +216,24 @@ async def get_Vbat(): return await read_variable("Vbat")
 # SOC: State of charge Capacity
 async def get_SOC(): return await read_variable("SOC")
 
+# Pactouser: AC power to user
+async def get_Pac_to_user(): return await read_variable("Pac_to_user")
 
 # PactouserTotal: AC power to user total
-async def get_PactouserTotal(): return await read_variable("PactouserTotal")
+async def get_Pac_to_user_Total(): return await read_variable("Pac_to_user_Total")
 
 
-# Pac to grid: AC power to grid
+# Pac_to_grid: AC power to grid
 async def get_Pac_to_grid(): return await read_variable("Pac_to_grid")
 
+# Pac_to_grid_total: AC power to grid total
+async def get_Pactogrid_total(): return await read_variable("Pac_to_grid_total")
 
-# Pactogrid total: AC power to grid total
-async def get_Pactogrid_total(): return await read_variable("Pactogrid_total")
+# PLocalLoad total: INV power to local load
+async def get_PLocalLoad(): return await read_variable("PLocalLoad")
+
+# PLocalLoad_total total: INV power to local load total
+async def get_PLocalLoad_total(): return await read_variable("PLocalLoad_total")
 
 
 # Battery Temperature: Battery Temperature
